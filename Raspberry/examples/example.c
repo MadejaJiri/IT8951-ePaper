@@ -371,8 +371,8 @@ UBYTE Dynamic_GIF_Example(UWORD Panel_Width, UWORD Panel_Height, UDOUBLE Init_Ta
 
     UDOUBLE Imagesize;
 
-    UBYTE Pic_Count = 0;
-    UBYTE Pic_Num = 31;
+    UBYTE Pic_Count = 32;
+    UBYTE Pic_Num = 30;
     char Path[30];
 
     UDOUBLE Basical_Memory_Addr = Init_Target_Memory_Addr;
