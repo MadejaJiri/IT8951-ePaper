@@ -372,7 +372,7 @@ UBYTE Dynamic_GIF_Example(UWORD Panel_Width, UWORD Panel_Height, UDOUBLE Init_Ta
     UDOUBLE Imagesize;
 
     UBYTE Pic_Count = 0;
-    UBYTE Pic_Num = 7;
+    UBYTE Pic_Num = 31;
     char Path[30];
 
     UDOUBLE Basical_Memory_Addr = Init_Target_Memory_Addr;
@@ -399,7 +399,7 @@ UBYTE Dynamic_GIF_Example(UWORD Panel_Width, UWORD Panel_Height, UDOUBLE Init_Ta
     Animation_Test_Start = clock();
     for(int i=0; i < Pic_Num; i += 1){
         Paint_Clear(WHITE);
-        sprintf(Path,"./pic/800x600_gif_%d.bmp",Pic_Count++);
+        sprintf(Path,"./pic/800x600 (%d).bmp",Pic_Count++);
         GUI_ReadBmp(Path, 0, 0);
         //For color definition of all BitsPerPixel, you can refer to GUI_Paint.h
         Paint_DrawNum(10, 10, i+1, &Font16, 0x00, 0xF0);
