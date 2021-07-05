@@ -295,7 +295,7 @@ UBYTE Dynamic_Refresh_Example(IT8951_Dev_Info Dev_Info, UDOUBLE Init_Target_Memo
         Dynamic_Area_Start = clock();
         Debug("Start to dynamic display...\r\n");
 
-        for(Dynamic_Area_Width = 96, Dynamic_Area_Height = 64; (Dynamic_Area_Width < Panel_Width - 32) && (Dynamic_Area_Height < Panel_Height - 24); Dynamic_Area_Width += 32, Dynamic_Area_Height += 24)
+        for(Dynamic_Area_Width = 3, Dynamic_Area_Height = 2; (Dynamic_Area_Width < Panel_Width - 32) && (Dynamic_Area_Height < Panel_Height - 24); Dynamic_Area_Width = Dynamic_Area_Width*2, Dynamic_Area_Height = Dynamic_Area_Height*2)
         {
 
             Imagesize = ((Dynamic_Area_Width % 8 == 0)? (Dynamic_Area_Width / 8 ): (Dynamic_Area_Width / 8 + 1)) * Dynamic_Area_Height;
@@ -868,7 +868,7 @@ void Color_Test(IT8951_Dev_Info Dev_Info, UDOUBLE Init_Target_Memory_Addr)
 			Paint_DrawString_EN(1000, 600, "Hello, World!", &Font24, 0x0a5a, 0x0fff);
 			Paint_DrawString_EN(1000, 700, "Hello, World!", &Font24, 0x05aa, 0x0fff);
 
-			Paint_DrawString_CN(700, 400, "��� ΢ѩ����", &Font24CN, 0x00fa, 0x0000);
+			Paint_DrawString_CN(700, 400, "ÄãºÃ Î¢Ñ©µç×Ó", &Font24CN, 0x00fa, 0x0000);
 			Paint_DrawNum(700, 500, 123456789, &Font24, 0x0a0f, 0x0fff);
 			Paint_DrawTime(700, 600, &Time, &Font24, 0x0fa0, 0x0fff);
 		}else {
